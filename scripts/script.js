@@ -8,7 +8,7 @@ function searchFlickr() {
     return;
   }
 
-  const flickrApiUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${APIkey}&text=${searchText}&format=json&nojsoncallback=1`;
+  const flickrApiUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${APIkey}&text=${searchText}&sort=relevance&format=json&nojsoncallback=1`;
 
   fetch(flickrApiUrl)
     .then((response) => response.json())
