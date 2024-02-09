@@ -20,6 +20,17 @@ function searchFlickr() {
     });
 }
 
+// Gör att man kan söka genom att trycka Enter
+var input = document.getElementById("searchInput");
+
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.querySelector(".search-button").click();
+  }
+});
+
+// Eventlistener för sök-knappen
 document
   .querySelector(".search-button")
   .addEventListener("click", searchFlickr);
