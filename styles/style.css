@@ -9,45 +9,47 @@ html {
   margin: 0;
 }
 body {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
+  background: #CAD2C5;
 }
+
 .wrapper {
-  margin: 0;
-  padding: 10px;
-  background-color: #84A98C;
+  background: white;
+  width: 70vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.search-bar {
+  --size: 60px;
+  border: 2px solid black;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: black solid;
-  border-radius: 10px;
-  width: 1200px;
-  height: 800px;
-}
-.main-heading {
-  margin-bottom: 40px;
+  border-radius: 50px;
+  height: var(--size);
 }
 
+.search-bar__input {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  padding: 0 0.5em;
+  border: 0;
+  background: transparent;
 
-.container {
-  display: flex;
-
+  &:focus {
+    outline: 0;
+  }
 }
-.search-input {
-  height: 40px;
-  width: 400px;
-  text-align: center;
-  border: black solid 3px;
-  border-radius: 8px;
-}
-
-.search-button {
-  height: 40px;
-  width: 70px;
-  border: black solid 3px;
-  border-radius: 8px;
-  margin-left: 10px;
+.search-bar__submit {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  border-radius: 50%;
+  background: pink;
+  width: calc(var(--size) - 10px);
+  height: calc(var(--size) - 10px);
 }
