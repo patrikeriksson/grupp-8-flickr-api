@@ -53,3 +53,7 @@ body {
   width: calc(var(--size) - 10px);
   height: calc(var(--size) - 10px);
 }
+
+#typewriter {
+  color:#CAD2C5;
+}

@@ -34,3 +34,71 @@ function displayImages(photos) {
         imageContainer.appendChild(imageElement);
     });
 }
+
+/////////////////////////////////////////////////
+//////////// Typewriter ////////////////////////
+///////////////////////////////////////////////
+
+// JavaScript
+var typeWriterElement = document.getElementById('typewriter');
+typeWriterElement.placeholder = "";
+
+var textArray = ["Cats", "Dogs", "Cars", "Beach"];
+var animationInProgress = true; // Flag to track if animation is in progress
+
+function animateText(text, i, direction) {
+    if (!animationInProgress) return;
+
+    typeWriterElement.value = text.substring(0, i);
+
+    var delay = direction === 'typing' ? 250 - Math.random() * 100 : 10 + Math.random() * 100;
+
+    setTimeout(function () {
+        if (direction === 'typing') {
+            if (i < text.length + 1) {
+                animateText(text, i + 1, 'typing');
+            } else {
+                // After typing, initiate deleting and move to the next word
+                animateText(text, i - 1, 'deleting');
+            }
+        } else if (direction === 'deleting') {
+            if (i > 0) {
+                animateText(text, i - 1, 'deleting');
+            } else {
+                // After deleting, move to the next word
+                var currentIndex = textArray.indexOf(text);
+                var nextIndex = (currentIndex + 1) % textArray.length;
+                animateText(textArray[nextIndex], 0, 'typing');
+            }
+        }
+    }, delay);
+}
+
+function startWriter(i) {
+    if (typeof textArray[i] === 'undefined') return;
+
+    animateText(textArray[i], 0, 'typing');
+}
+
+// Add event listeners for input, focus, and blur events
+typeWriterElement.addEventListener('input', function () {
+    // If the user interacts with the search box, stop the animation
+    animationInProgress = false;
+});
+
+typeWriterElement.addEventListener('focus', function () {
+    // Clear the text instantly and stop the animation
+    typeWriterElement.value = '';
+    animationInProgress = false;
+});
+
+typeWriterElement.addEventListener('blur', function () {
+    // Restart the animation when the element loses focus (click outside the box)
+    animationInProgress = true;
+    startWriter(0);
+});
+
+// Initial start after a delay
+setTimeout(function () {
+    startWriter(0);
+}, 1000);
