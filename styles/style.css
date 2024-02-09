@@ -8,34 +8,31 @@ html {
   /* font-family: "Montserrat", sans-serif;  */
   margin: 0;
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px;
+
+main {
+  background-color: #84a98c;
 }
+
 .wrapper {
   margin: 0;
-  padding: 10px;
-  background-color: #84A98C;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: black solid;
+  border: none;
   border-radius: 10px;
-  width: 1200px;
-  height: 800px;
+  width: 100vw;
+  height: 100vh;
 }
 .main-heading {
   margin-bottom: 40px;
 }
 
-
 .container {
   display: flex;
-
 }
+
 .search-input {
   height: 40px;
   width: 400px;
