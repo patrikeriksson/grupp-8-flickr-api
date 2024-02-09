@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #84a98c;
+  background-color: #cad2c5;
 }
 
 .wrapper {
@@ -23,6 +23,8 @@ body {
   border: none;
   border-radius: 10px;
   width: 100vw;
+  height: 35vh;
+  background-color: #84a98c;
 }
 
 .main-heading {
