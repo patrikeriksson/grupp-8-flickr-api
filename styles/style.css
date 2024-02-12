@@ -17,8 +17,9 @@ body {
   align-items: center;
   background: #CAD2C5;
   
+  
 }
-.title {
+.main-heading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,11 +30,8 @@ body {
 .wrapper {
   background: transparent;
   width: 70vw;
-  height: 200px;
   padding: 3em;
-  /* box-shadow: 0 0 3em rgba(0, 0, 0, 0.3); */
   position: relative;
-  border-radius: 21px;
   
 }
 
@@ -46,8 +44,7 @@ body {
   width: var(--size);
   padding: 3px;
   position: relative;
-  transition: 650ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
 }
 
@@ -62,26 +59,23 @@ body {
   bottom: 0;
   left: 0;
   line-height: calc(var(--size) - 3px);
+  width: 95%;
 }
 
 .search-bar__input:focus {
   outline: 0;
-  
 }
 
 
 .search-bar__submit {
   font-size: 1.5rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   border: 0;
   background: transparent;
   border-radius: 50%;
-  
   width: calc(var(--size) - 10px);
   height: calc(var(--size) - 10px);
   margin-left: auto;
-  
- 
 }
 
 .search-bar:focus-within {
@@ -131,6 +125,7 @@ body {
   color: black;
   /* color:#CAD2C5; */
   opacity: 0.5;
+}
 
 .overlay {
   position: fixed;
