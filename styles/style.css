@@ -21,7 +21,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 200px;
   font-size: 40px;
 }
 .wrapper {
@@ -81,11 +80,7 @@ body {
   
  
 }
-/*
-.search-bar:focus-within #typewriter {
-  opacity: 1;
-}
-*/
+
 .search-bar:focus-within {
 
   .search-bar__input {
@@ -104,10 +99,6 @@ body {
   outline: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
-
-
-
-
 
 #typewriter {
   color: black;

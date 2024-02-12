@@ -1,7 +1,7 @@
 let APIkey = 'c696fb2bafb493501053fbb514ef2435';
 
 function searchFlickr() {
-    const searchText = document.getElementById('searchInput').value;
+    const searchText = document.getElementById('typewriter').value;
 
     if (searchText.trim() === '') {
         alert('Please enter a search term.');
