@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   /* Heading font*/
   font-family: "Barlow Condensed", sans-serif;
@@ -130,4 +131,24 @@ body {
   color: black;
   /* color:#CAD2C5; */
   opacity: 0.5;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay img {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+  cursor: pointer;
 }

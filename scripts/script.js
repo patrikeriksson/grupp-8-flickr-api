@@ -35,6 +35,26 @@ document
   .querySelector(".search-button")
   .addEventListener("click", searchFlickr);
 
+function displayLightbox(imageUrl, title) {
+
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+
+  const lightboxImage = document.createElement("img");
+  lightboxImage.src = imageUrl;
+  lightboxImage.alt = title;
+
+  overlay.appendChild(lightboxImage);
+
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      document.body.removeChild(overlay);
+    }
+  });
+
+  document.body.appendChild(overlay);
+}
+
 function displayImages(photos) {
   const imageContainer = document.getElementById("imageContainer");
   imageContainer.innerHTML = "";
@@ -45,6 +65,10 @@ function displayImages(photos) {
     const imageElement = document.createElement("img");
     imageElement.src = imageUrl;
     imageElement.alt = photo.title;
+
+    imageElement.addEventListener("click", () => {
+      displayLightbox(imageUrl, photo.title);
+    });
 
     imageContainer.appendChild(imageElement);
   });
