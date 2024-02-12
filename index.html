@@ -14,21 +14,33 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/680ceb3daa.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main>
+      <div class="title">
+        <h1 class="main-heading">Flickr Image Search</h1>
+      </div>
       <div class="wrapper">
-        <h1 class="main-heading">Photos</h1>
-        <h2 class="ideas">
-          ideas: generator som generer olika ider som cat, dogs
-        </h2>
-        <input
-          class="search-input"
-          type="text"
-          placeholder="Search for images..."
-          id="searchInput"
-        />
-        <button class="search-button" type="submit">Search</button>
+        <div class="search-bar">
+          <input
+            class="search-bar__input"
+            type="text"
+            placeholder=" "
+            id="typewriter"
+            aria-label="search"
+          />
+
+          <button class="search-bar__submit">
+            <i
+              class="fa-solid fa-magnifying-glass"
+              aria-label="submit search"
+            ></i>
+          </button>
+        </div>
       </div>
       <div id="imageContainer"></div>
     </main>
