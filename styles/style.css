@@ -68,9 +68,9 @@ body {
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
+  cursor: pointer;
 
   &:hover {
-    cursor: pointer;
     transform: scale(1.07);
     transition: 0.3s;
   }
