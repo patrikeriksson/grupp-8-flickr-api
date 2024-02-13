@@ -16,8 +16,6 @@ body {
   justify-content: center;
   align-items: center;
   background: #CAD2C5;
-  
-  
 }
 .main-heading {
   display: flex;
@@ -28,11 +26,9 @@ body {
 }
 
 .wrapper {
-  background: transparent;
   width: 70vw;
   padding: 3em;
   position: relative;
-  
 }
 
 .search-bar {
@@ -44,7 +40,6 @@ body {
   width: var(--size);
   padding: 3px;
   position: relative;
-  /* overflow: hidden; */
   width: 100%;
 }
 
@@ -69,7 +64,7 @@ body {
 
 .search-bar__submit {
   font-size: 1.5rem;
-  /* cursor: pointer; */
+  cursor: pointer;
   border: 0;
   background: transparent;
   border-radius: 50%;
@@ -78,19 +73,9 @@ body {
   margin-left: auto;
 }
 
-.search-bar:focus-within {
-
-  .search-bar__input {
-    /* opacity: 1; */
-    cursor: initial;
-    
-    width: calc(100% - var(--size));
-  }
-
-  .search-bar__submit {
-    background: #CAD2C5;
-    color: white;
-  }
+.search-bar__submit:hover{
+  outline: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 
 #imageContainer {
@@ -116,20 +101,14 @@ body {
     transition: 0.3s;
   }
 }
-.search-bar__submit:focus:hover{
-  outline: 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
-}
+
 
 #typewriter {
   color: black;
   /* color:#CAD2C5; */
   opacity: 0.5;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4bbc646bedd4bb85b632079f37482c9660d08767
 .overlay {
   position: fixed;
   top: 0;
