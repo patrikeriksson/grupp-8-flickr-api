@@ -1,5 +1,9 @@
 let APIkey = "c696fb2bafb493501053fbb514ef2435";
 
+////////////////////////////////////////////////
+///// Search bar
+///////////////////////////////////////////////
+
 function searchFlickr() {
     const searchText = document.getElementById('typewriter').value;
 
@@ -39,6 +43,10 @@ submitButton.addEventListener("click", function (event) {
     searchFlickr();
 });
 
+////////////////////////////////////////////////
+///// Lightbox
+///////////////////////////////////////////////
+
 function displayLightbox(imageUrl, title) {
     const overlay = document.createElement("div");
     overlay.classList.add("overlay");
@@ -76,6 +84,10 @@ function displayImages(photos) {
         imageContainer.appendChild(imageElement);
     });
 }
+
+////////////////////////////////////////////////
+///// Typewriter Effect
+///////////////////////////////////////////////
 
 var textArray = ["Cats", "Dogs", "Cars", "Beach"];
 
