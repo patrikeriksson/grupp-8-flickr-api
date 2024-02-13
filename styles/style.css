@@ -5,30 +5,24 @@
 html {
   /* Heading font*/
   font-family: "Barlow Condensed", sans-serif;
-  /* Everything else font */
+  /* Everything else font? */
   /* font-family: "Montserrat", sans-serif;  */
   margin: 0;
 }
 
 body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #CAD2C5;
+  background: #cad2c5;
 }
 .main-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   font-size: 40px;
+  text-align: center;
 }
 
-.wrapper {
-  width: 70vw;
-  padding: 3em;
-  position: relative;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: relative; */
 }
 
 .search-bar {
@@ -39,8 +33,8 @@ body {
   height: var(--size);
   width: var(--size);
   padding: 3px;
-  position: relative;
-  width: 100%;
+  /* position: relative; */
+  width: 50%;
 }
 
 .search-bar__input {
@@ -49,10 +43,10 @@ body {
   padding: 0 0.5em;
   border: 0;
   background: transparent;
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  /* top: 0;
   bottom: 0;
-  left: 0;
+  left: 0; */
   line-height: calc(var(--size) - 3px);
   width: 95%;
 }
@@ -60,7 +54,6 @@ body {
 .search-bar__input:focus {
   outline: 0;
 }
-
 
 .search-bar__submit {
   font-size: 1.5rem;
@@ -73,7 +66,7 @@ body {
   margin-left: auto;
 }
 
-.search-bar__submit:hover{
+.search-bar__submit:hover {
   outline: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
@@ -98,10 +91,8 @@ body {
 
   &:hover {
     transform: scale(1.07);
-    transition: 0.3s;
   }
 }
-
 
 #typewriter {
   color: black;
