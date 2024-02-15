@@ -43,6 +43,7 @@ body {
 .search-bar {
   --size: 60px;
   display: flex;
+  align-items: center;
   border-radius: 50px;
   height: var(--size);
   width: var(--size);
