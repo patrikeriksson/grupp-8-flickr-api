@@ -7,12 +7,10 @@ let APIkey = "c696fb2bafb493501053fbb514ef2435";
 function searchFlickr() {
   const searchText = document.getElementById("typewriter").value;
 
-  console.log("Search text is:", searchText);
-
-  if (searchText.trim() === "") {
-    alert("Please enter a search term.");
-    return;
-  }
+    if (searchText.trim() === "") {
+        alert("Please enter a search term.");
+        return;
+    }
 
   const flickrApiUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${APIkey}&text=${searchText}&sort=relevance&format=json&nojsoncallback=1`;
 
