@@ -7,8 +7,6 @@ let APIkey = "c696fb2bafb493501053fbb514ef2435";
 function searchFlickr() {
     const searchText = document.getElementById('typewriter').value;
 
-    console.log("Search text is:", searchText)
-
     if (searchText.trim() === "") {
         alert("Please enter a search term.");
         return;
@@ -28,8 +26,7 @@ function searchFlickr() {
 
 var input = document.getElementById("typewriter");
 var submitButton = document.querySelector(".search-bar__submit");
-var typeWriterElement = document.getElementById('typewriter');
-var animationInProgress = true;
+
 
 input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -89,6 +86,9 @@ function displayImages(photos) {
 ///// Typewriter Effect
 ///////////////////////////////////////////////
 
+
+var typeWriterElement = document.getElementById('typewriter');
+var animationInProgress = true;
 var textArray = ["Cats", "Dogs", "Cars", "Beach"];
 
 function animateText(text, i, direction) {
